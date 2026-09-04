@@ -224,7 +224,7 @@ class LSTMTrainer:
         train_samples: List[SequenceSample],
         test_loader: DataLoader,
         scenario_test_loaders: Dict[str, DataLoader],
-    ) -> Tuple[Dict[str, float], Dict[str, float], Dict[str, float], Dict[str, float], Dict[str, Dict[str, float]]]:
+    ) -> Tuple[Dict[str, float], Dict[str, float], Dict[str, float], Dict[str, Dict[str, float]]]:
         """Evaluate best model, Mean Baseline, and Persistence Baseline on test set."""
         best_ckpt = torch.load(self.artifacts_dir / "lstm_best.pt", weights_only=False)
         self.model.load_state_dict(best_ckpt["model_state_dict"])
