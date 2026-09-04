@@ -14,7 +14,7 @@
 ## 2. Time-Aware Split Integrity
 - **Train Max Target Timestep**: $t = 502$
 - **Validation Min Input Timestep**: $t = 503$
-- **Validation Max Target Timestep**: $t = 609$
+- **Validation Max Target Timestep**: $t = 610$
 - **Test Min Input Timestep**: $t = 611$
 - **Strict Temporal Ordering**: Train < Validation < Test (True)
 
