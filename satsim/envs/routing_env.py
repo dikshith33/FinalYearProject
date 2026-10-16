@@ -155,7 +155,7 @@ class SatelliteRoutingEnv(gym.Env):
         r_success = 0.0
 
         if not has_node or not has_edge:
-            r_loss = -1.0
+            r_loss = -2.0
             terminated = True
         else:
             edge_delay = float(self.current_graph[self.curr_node][next_node].get("delay_ms", 10.0))
@@ -165,7 +165,7 @@ class SatelliteRoutingEnv(gym.Env):
             if self.curr_node == self.dst_node:
                 r_delivery = 1.0
                 r_throughput = 0.5
-                r_success = 5.0
+                r_success = 10.0
                 terminated = True
 
         if self.hop_count >= self.max_hops and not terminated:
